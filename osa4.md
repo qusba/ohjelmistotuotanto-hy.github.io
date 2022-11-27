@@ -1326,11 +1326,11 @@ Voimme myös toteuttaa funktioita, jotka palauttavat lambdoja:
 def rakenne_sisaltaa_sanan(sana):
     return lambda rivi: sana in rivi
 
-for rivi in kirja.rivit_jotka_tayttavat_ehdon(rakenna_sisaltaa_sanan("beer")):
+for rivi in kirja.rivit_jotka_tayttavat_ehdon(rakenne_sisaltaa_sanan("beer")):
     print(rivi)
 ```
 
-Huomaa, kuinka kyseissä esimerkissä funktio `rakenna_sisaltaa_sanan` muistuttaa tehdas-suunnittelumallin mukaisia tehdasmetodeja.
+Huomaa, kuinka kyseissä esimerkissä funktio `rakenne_sisaltaa_sanan` muistuttaa tehdas-suunnittelumallin mukaisia tehdasmetodeja.
 
 Refaktoroidaan vielä `GutenbergLukija` luokkaa hyödyntämällä Pythonin funktionaalisen ohjelmoinnin työkalupakkia. Koska luokan metodeissa käsitellään paljon listoja, voimme hyödyntää funktiota [map](https://docs.python.org/3/library/functions.html#map) ja [filter](https://docs.python.org/3/library/functions.html#filter).
 
